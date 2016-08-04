@@ -24,7 +24,8 @@ for file in input:
 		if campo[0] == 'Reads' and campo[1] == 'with':
 			reads.append(line)
 	asslog.close()
-out.write('Sample' + '\n' + 'Total reads' +'\n' +'Reads with adapters' + '\n'+ '\n')
+
+input.close()
 for i in range(len(names)):
 	out.write(names[i] + '\n' + total[i] + '\n' + reads[i] + '\n'+ '\n')
 out.close()

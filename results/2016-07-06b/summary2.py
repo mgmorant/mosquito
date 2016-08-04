@@ -33,7 +33,8 @@ for file in input:
 				else:
 					short.append('------')
 	pairlog.close()
-out.write('Sample' + '\n' + 'Read1 with adapter' + '\n'+ 'Read 2 with adapter' + '\n' + '*Pairs that were too short'+ '\n'+'\n')
+
+input.close()
 for i in range(len(names)):
         out.write(names[i] + '\n' + r1[i] +'\n' + r2[i] + '\n' + short[i]+ '\n'+ '\n')
 out.close()
