@@ -36,6 +36,9 @@ if [ ! -e mosquito.vcf ]; then
 if [ ! -e HW.hwe ]; then
    vcftools --vcf mosquito.vcf --out HW --hardy
 fi
+#Separation of Mit/nuclear
+vcftools --vcf mosquito.vcf --chr Mt --out mosquito_mt --recode --recode-INFO-all
+vcftools --vcf mosquito.vcf --not-chr Mt --out mosquito_nuc --recode --recode-INFO-all
 
 # There are 2498 sites where all samples are homozygous for an alternative
 # SNP, and 1153 sites segregating among the samples. All the sites homozygous
